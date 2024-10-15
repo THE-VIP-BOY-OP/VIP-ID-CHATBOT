@@ -22,15 +22,13 @@ mongo = MongoCli(config.MONGO_URL)
 db = mongo.Anonymous
 OWNER = config.OWNER_ID
 
-
 class nexichat(Client):
     def __init__(self):
         super().__init__(
             name="nexichat",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
-            lang_code="en",
-            bot_token=config.BOT_TOKEN,
+            session_string=config.SESSION_STRING,  # Use string session instead of bot_token
             in_memory=True,
             parse_mode=ParseMode.DEFAULT,
         )
@@ -44,6 +42,5 @@ class nexichat(Client):
 
     async def stop(self):
         await super().stop()
-
 
 nexichat = nexichat()
