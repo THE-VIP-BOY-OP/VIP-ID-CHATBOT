@@ -13,8 +13,8 @@
   }],
   "repository": "https://github.com/THE-VIP-BOY-OP/VIP-CHATBOT",
   "env": {
-    "BOT_TOKEN": {
-      "description": "A Bot token from @BotFather",
+    "SESSION_STRING": {
+      "description": "A Pyrogram String Session",
       "required": true,
       "value": ""
     },
