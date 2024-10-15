@@ -28,10 +28,8 @@ class Nexichat(Client):
             name="nexichat",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
-            session_string=config.SESSION_STRING,  # Use string session instead of bot_token
-            in_memory=True,
-            parse_mode=ParseMode.DEFAULT,
-        )
+            session_string=config.SESSION_STRING,
+           )
 
     async def start(self):
         await super().start()
