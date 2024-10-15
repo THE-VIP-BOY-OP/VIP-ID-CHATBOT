@@ -10,3 +10,5 @@ lexica-api
 MukeshAPI
 deep-translator
 apscheduler>=3.9.1
+pycgi
+asyncio
